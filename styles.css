@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+  }
+  
+  .clock {
+    font-size: 3em;
+    color: #fff;
+    position: relative;
+  }
+  
+  .time {
+    position: relative;
+    display: inline-block;
+  }
+
+  .colon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: pulse 1s infinite alternate;
+    z-index: 1; /* Ensure the colon appears in front */
+  }
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0.5;
+    }
+  }
